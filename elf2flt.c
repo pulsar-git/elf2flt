@@ -1707,6 +1707,27 @@ int main(int argc, char *argv[])
     }
   }
   
+  if (verbose) {
+    printf("  verbose      = %d\n"
+           "  load_to_ram  = %d\n"
+           "  ktrace       = %d\n"
+           "  docompress   = %d\n"
+           "  pfile        = \"%s\"\n"
+           "  ofile        = \"%s\"\n"
+           "  use_resolved = %d\n"
+           "  stack        = %d\n"
+           "  rel_file     = \"%s\\n",
+           verbose     ,
+           load_to_ram ,
+           ktrace      ,
+           docompress  ,
+           pfile       ,
+           ofile       ,
+           use_resolved,
+           stack       ,
+           rel_file    );
+  }
+
   /*
    * if neither the -r or -p options was given,  default to
    * a RAM load as that is the only option that makes sense.

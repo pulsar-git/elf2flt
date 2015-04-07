@@ -42,7 +42,7 @@ ifneq ($(strip $(shell gcc -v 2>&1 | grep "cygwin")),)
 endif
 
 LDFILE= elf2flt.ld
-ifeq ($(strip $(CPU)),e1)
+ifeq ($(filter-out e1 arm,$(CPU)),)
 SRC_LDFILE= $(srcdir)/$(CPU)-elf2flt.ld
 else 
 SRC_LDFILE= elf2flt.ld
